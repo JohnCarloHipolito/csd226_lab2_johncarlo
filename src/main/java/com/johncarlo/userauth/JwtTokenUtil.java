@@ -13,7 +13,7 @@ public class JwtTokenUtil {
 
     public String generateToken(String email) {
         Date issuedAt = new Date();
-        Date expiryDate = new Date(issuedAt.getTime() + 10000);
+        Date expiryDate = new Date(issuedAt.getTime() + 30000);
 //        Date expiryDate = new Date(issuedAt.getTime() + 86400000);
         return Jwts.builder()
                 .subject(email)
