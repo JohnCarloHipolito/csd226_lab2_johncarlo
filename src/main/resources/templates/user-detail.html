@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout :: head}">
+    <title>User Authentication</title>
+</head>
+<body>
+<div th:replace="~{layout :: body}">
+    <main th:fragment="content">
+        <div class="flex flex-col justify-center items-center mx-auto bg-white rounded-xl shadow-md max-w-xl m-4 p-4">
+            <h1 class="mb-4 text-2xl font-bold text-center text-blue-500">User Detail</h1>
+            <p class="mb-4 text-gray-700">User Name: <span th:text="${user.name}"></span></p>
+            <p class="mb-4 text-gray-700">Email: <span th:text="${user.email}"></span></p>
+            <p class="mb-4 text-gray-700">Type: <span th:text="${user.type}"></span></p>
+            <a class="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="/logout">Logout</a>
+        </div>
+    </main>
+</div>
+</body>
+</html>
